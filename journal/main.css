@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f2ec;
+    color: #111;
+    font-family: Georgia, serif;
+}
+
+.container {
+    width: 60%;
+    margin: 120px auto;
+}
+
+h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #111;
+    margin-bottom: 60px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
