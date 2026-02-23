@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: #eaf6ff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.title {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.sky {
+    position: relative;
+    height: 400vh;
+}
+
+.cloud {
+    position: absolute;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.cloud:hover {
+    transform: scale(2);
+}
+
+.c1 { top: 200px; left: 10%; }
+.c2 { top: 600px; right: 15%; }
+.c3 { top: 1000px; left: 25%; }
+.c4 { top: 1400px; right: 10%; }
+.c5 { top: 1800px; left: 15%; }
+.c6 { top: 2200px; right: 20%; }
+.c7 { top: 2600px; left: 30%; }
+.c8 { top: 3000px; right: 15%; }

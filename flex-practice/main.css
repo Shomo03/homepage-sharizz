@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-container {
+    background-color: cornflowerblue;
+    padding: 10px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    background-color:palevioletred;
+    height: 20%; 
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+}
+
+.top-item {
+    background-color: rgb(185, 161, 233);
+    width: 100%;
+
+}
+
+.bottom {
+    background-color: thistle;
+    height: 80%;
+}

@@ -62,3 +62,9 @@
     margin: 0;
 
 }
+
+.sticky {
+    background-color: cadetblue;
+    position: sticky;
+    bottom: 30;
+}
