@@ -1,26 +1,37 @@
 body {
     margin: 0;
-    background-color: #eaf6ff;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, #FFFDE4, #3f8ed3, #2480d0, #005AA7);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .title {
-    height: 100vh;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
 }
 
+.scroll {
+    height: 251.7px;
+    width: 245px;
+    border-top-width: 0px;
+    border-top-style: solid;
+    top: -214px;
+    right: 128px;
+    left: 151px;
+    bottom: -155.7px;
+    top: 601.3px;right: 152px;height: 295.7px;
+}
+
 .sky {
     position: relative;
-    height: 400vh;
+    height:500vh;
 }
 
 .cloud {
     position: absolute;
-    width: 220px;
+    width: 300px;
     transition: 0.3s;
 }
 
@@ -28,6 +39,7 @@ body {
     transform: scale(2);
 }
 
+.c  { top: 500px; left: 40%; }
 .c1 { top: 200px; left: 10%; }
 .c2 { top: 600px; right: 15%; }
 .c3 { top: 1000px; left: 25%; }
@@ -35,4 +47,4 @@ body {
 .c5 { top: 1800px; left: 15%; }
 .c6 { top: 2200px; right: 20%; }
 .c7 { top: 2600px; left: 30%; }
-.c8 { top: 3000px; right: 15%; }
+.c8 { top: 3200px; right: 15%; }
