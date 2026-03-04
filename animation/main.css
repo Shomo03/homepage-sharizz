@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.square {
+    background-color:lightpink;
+    width:200px;
+    height:200px;
+    /* animation-name:test;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: both; */
+
+    /* first time value is the animation-duration, second time value is the animation-delay */
+    animation: test 2s 4s infinite ease-in-out alternate both;
+
+}
+
+@keyframes test {
+    0% {
+        background-color: palegoldenrod;
+    }
+    50% {
+        background-color: royalblue;
+    }
+    100% {
+        background-color: lightcoral;
+    }
+}
+
+.container {
+    background-color: steelblue;
+    height:100vh;
+    /* width:50vh; */
+    display: flex;
+   justify-content: space-evenly;
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+
+    animation: blink 4s infinite alternate; 
+}
+
+@keyframes blink {
+    0% {
+        scale: 1 1;
+    }
+    100% {
+        scale: 1 0;
+    }
+}
+
+
+.circle { 
+    background-color: mediumaquamarine;
+    width: 100px;
+    height:100px;
+    border-radius: 100%;
+    animation: pulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        background: lightcoral;
+        scale: 1; 
+        /* width:100px;
+        height:100px; */
+    }
+    100% {
+        background: sandybrown;
+        scale: 1.4; 
+        /* width:100px;
+        height:100px; */
+    }
+}
+
+.box {
+    background:khaki;
+    width: 100px;
+    height: 100px;
+    animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0;
+    }
+    100% { 
+        rotate: 360deg;
+    }
+}
+
+.mover { 
+    background-color: orange;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    animation: move 4s infinite
+}
+
+@keyframes move { 
+    0% {
+        left: -150px;;
+    }
+    100% {
+        left:100%;
+    }
+}
+
+.changer {
+    background-color: firebrick;
+    width: 100px;
+    height: 100px;
+    transition: background 2s, 
+                border-radius 2s,rotate 2s;
+    /* a good rule of thumb to remember,  is we generally don't want to apply transitions to the hover state */
+}
+
+.changer:hover {
+    /* animation: change 2s forwards; */
+    background:grey ;
+    border-radius: 100%;
+    rotate: 360deg;
+}
+
+/* @keyframes change {
+    0% {
+        background-color: firebrick;
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        background:grey ;
+        border-radius: 100%;
+    }
+} */
