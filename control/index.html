@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pizza Box Control</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <h1>Build a Pizza</h1>
+
+            <p>
+                Add toppings and make your own pizza.
+            </p>
+
+            <div class="pizza-box">
+                <div class="pizza">
+
+                    <div class="topping pepperoni" id="pepperoni"></div>
+                    <div class="topping mushroom" id="mushroom"></div>
+                    <div class="topping olive" id="olive"></div>
+                    <div class="topping pepper" id="pepper"></div>
+
+                </div>
+            </div>
+
+            <button onclick="toggleTopping('pepperoni')">Pepperoni</button>
+            <button onclick="toggleTopping('mushroom')">Mushroom</button>
+            <button onclick="toggleTopping('olive')">Olive</button>
+            <button onclick="toggleTopping('pepper')">Peppers</button>
+            <button onclick="clearPizza()">Clear Pizza</button>
+
+        </div>
+
+        <script>
+            function toggleTopping(id) {
+                let topping = document.getElementById(id);
+
+                if (topping.style.display == "block") {
+                    topping.style.display = "none";
+                } else {
+                    topping.style.display = "block";
+                }
+            }
+
+            function clearPizza() {
+                document.getElementById("pepperoni").style.display = "none";
+                document.getElementById("mushroom").style.display = "none";
+                document.getElementById("olive").style.display = "none";
+                document.getElementById("pepper").style.display = "none";
+            }
+        </script>
+
+    </body>
+</html>
