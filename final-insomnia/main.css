@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*background*/
+body {
+    color: cornflowerblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+    background: black;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 300vh;
+}
+
+.back-vid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.cover {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: -1;
+}
+/*Title Text*/
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    mix-blend-mode: lighten;
+    animation: paragraphGlow 4s ease-in-out infinite;
+}
+
+@keyframes paragraphGlow {
+    0% {
+        text-shadow: 0 0 0px rgba(100, 149, 237, 0);
+    }
+    50% {
+        text-shadow: 
+            0 0 8px rgba(100, 149, 237, 0.5),
+            0 0 16px rgba(100, 149, 237, 0.35),
+            0 0 24px rgba(100, 149, 237, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 0px rgba(100, 149, 237, 0);
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.title {
+    font-size: clamp(4rem, 12vw, 12rem);
+    color: #ffffff;
+    text-transform: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    transition: opacity 0.25s linear, transform 0.25s linear;
+    will-change: opacity, transform;
+}
+
+.title span {
+    transition: 1.5s;
+}
+
+.title:hover span {
+    filter: blur(20px);
+    opacity: 0;
+    transform: scale(2);
+}
+
+.title span:nth-child(10n+1) 
+    { transition-delay: 0s; }
+
+.title span:nth-child(10n+2) 
+    { transition-delay: 0.1s; }
+
+.title span:nth-child(10n+3) 
+    { transition-delay: 0.2s; }
+
+.title span:nth-child(10n+4) 
+    { transition-delay: 0.3s; }
+
+.title span:nth-child(10n+5) 
+    { transition-delay: 0.4s; }
+
+.title span:nth-child(10n+6) 
+    { transition-delay: 0.5s; }
+    
+.title span:nth-child(10n+7) 
+    { transition-delay: 0.6s; }
+
+.title span:nth-child(10n+8) 
+    { transition-delay: 0.7s; }
+
+/*BodyText*/
+.fog {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 6rem;
+    min-height: 100vh;
+}
+
+.fog-info {
+    max-width: 650px;
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+    padding: 2rem;
+    mix-blend-mode: lighten;
+}
+
+.fog-info p {
+    max-width: 550px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    animation: paragraphFloat 4s ease-in-out infinite, paragraphGlow 4s ease-in-out infinite;
+}
+
+@keyframes paragraphFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes paragraphGlow {
+    0% {
+        text-shadow: 0 0 0px rgba(100, 149, 237, 0);
+    }
+    50% {
+        text-shadow: 
+            0 0 8px rgba(100, 149, 237, 0.5),
+            0 0 16px rgba(100, 149, 237, 0.35),
+            0 0 24px rgba(100, 149, 237, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 0px rgba(100, 149, 237, 0);
+    }
+}
+
+/*Lil Weirdo*/
+.weirdo {
+    justify-self: center;
+    width: min(430px, 90%);
+    height: auto;
+    mix-blend-mode: lighten;
+}
+
+/*Sleepy Heads*/
+.monster-wrap {
+    min-height: 120vh;
+    padding: 6rem 3rem 4rem;
+}
+
+.monster-holder {
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+    transition: opacity 0.9s ease, transform 1s ease;
+    will-change: opacity, transform;
+}
+
+.monster-holder.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.monster {
+    width: min(900px, 77vw);
+    height: auto;
+    display: block;
+    mix-blend-mode: lighten;
+    transform-origin: center center;
+}
+
+.monster-one {
+    left: 15%;
+    top: -40%;
+}
+
+.monster-two {
+    right: 15%;
+    top: 26%;
+}
+
+.monster-three {
+    left: -9%;
+    top: 50%;
+}
+
+.orange-monster {
+    animation: floatOne 4.5s ease-in-out infinite, wobbleOne 6s ease-in-out infinite;
+}
+
+.red-monster {
+    animation: floatTwo 5s ease-in-out infinite, wobbleThree 6.5s ease-in-out infinite;
+}
+
+.blue-monster {
+    animation: floatThree 4.8s ease-in-out infinite, wobbleTwo 7s ease-in-out infinite;
+}
+
+.monster-note {
+    position: absolute;
+    left: 4%;
+    bottom: 6%;
+    max-width: 350px;
+    padding: 1rem 1.2rem;
+    border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 18px;
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+}
+
+.monster-note p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px) scale(0.96);
+    transition: opacity 0.9s ease, transform 1s ease;
+    will-change: opacity, transform;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.soft-zoom {
+    transition-duration: 1.2s;
+}
+
+/*Sleepy Heads Animation*/
+@keyframes floatOne {
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(-6deg) scale(1);
+    }
+    25% {
+        transform: translateY(-18px) translateX(8px) rotate(-3deg) scale(1.02);
+    }
+    50% {
+        transform: translateY(10px) translateX(-6px) rotate(2deg) scale(0.99);
+    }
+    75% {
+        transform: translateY(-12px) translateX(10px) rotate(-2deg) scale(1.03);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(-6deg) scale(1);
+    }
+}
+
+@keyframes floatTwo {
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(4deg) scale(1);
+    }
+    25% {
+        transform: translateY(-20px) translateX(-10px) rotate(1deg) scale(1.03);
+    }
+    50% {
+        transform: translateY(12px) translateX(8px) rotate(5deg) scale(0.98);
+    }
+    75% {
+        transform: translateY(-10px) translateX(-6px) rotate(2deg) scale(1.02);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(4deg) scale(1);
+    }
+}
+
+@keyframes floatThree {
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(-2deg) scale(1);
+    }
+    25% {
+        transform: translateY(-15px) translateX(12px) rotate(2deg) scale(1.02);
+    }
+    50% {
+        transform: translateY(14px) translateX(-8px) rotate(-1deg) scale(0.99);
+    }
+    75% {
+        transform: translateY(-20px) translateX(6px) rotate(3deg) scale(1.04);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(-2deg) scale(1);
+    }
+}
+
+@keyframes wobbleOne {
+    0% { filter: drop-shadow(0 0 0px rgba(255,255,255,0)); }
+    50% { filter: drop-shadow(0 0 18px rgba(255, 140, 0, 0.35)); }
+    100% { filter: drop-shadow(0 0 0px rgba(255,255,255,0)); }
+}
+
+@keyframes wobbleTwo {
+    0% { filter: drop-shadow(0 0 0px rgba(255,255,255,0)); }
+    50% { filter: drop-shadow(0 0 18px rgba(100, 160, 255, 0.35)); }
+    100% { filter: drop-shadow(0 0 0px rgba(255,255,255,0)); }
+}
+
+@keyframes wobbleThree {
+    0% { filter: drop-shadow(0 0 0px rgba(255,255,255,0)); }
+    50% { filter: drop-shadow(0 0 18px rgba(255, 70, 100, 0.35)); }
+    100% { filter: drop-shadow(0 0 0px rgba(255,255,255,0)); }
+}
+
+/*For The Phone*/
+@media (max-width: 1000px) {
+    .fog {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+        text-align: left;
+    }
+
+    .weirdo {
+        width: min(300px, 80%);
+    }
+
+    .monster-wrap {
+        min-height: 140vh;
+    }
+
+    .monster {
+        width: 220px;
+    }
+
+    .monster-one {
+        left: 2%;
+        top: 16%;
+    }
+
+    .monster-two {
+        right: 4%;
+        top: 18%;
+    }
+
+    .monster-three {
+        left: 26%;
+        top: 48%;
+    }
+
+    .monster-note {
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 2rem;
+        max-width: none;
+    }
+}

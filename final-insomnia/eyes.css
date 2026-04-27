@@ -1,0 +1,310 @@
+.blue-page {
+    background: #1c4989;
+}
+
+.orange-page {
+    background: #f1962d;
+}
+
+.red-page {
+    background: #f53148;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: white;
+    text-decoration: none;
+    background-color: #10458e;
+    border-radius: 30px;
+    box-shadow:
+        8px 8px 15px #4d8ee8,
+        -8px -8px 15px #1c4989;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    box-shadow:
+        4px 4px 10px #4d8ee8,
+        -4px -4px 10px #1c4989;
+
+    transform: translateY(-2px); 
+    filter: brightness(1.1);
+}
+
+/* center eyes */
+.eyes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3); 
+    display: flex;
+    gap: 60px;
+}
+
+.eye {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.eye.blinking {
+    animation: blink 6s ease-in-out infinite;
+}
+
+/* eyelid */
+.eye::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 60px;
+    z-index: 2;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.blue-page {
+    background: #1c4989;
+}
+
+.orange-page {
+    background: #f1962d;
+}
+
+.red-page {
+    background: #f53148;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: white;
+    text-decoration: none;
+    background-color: #10458e;
+    border-radius: 30px;
+    box-shadow:
+        8px 8px 15px #4d8ee8,
+        -8px -8px 15px #1c4989;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px); /* slight lift */
+    filter: brightness(1.1);
+}
+
+.blue-page .button {
+    background-color: #10458e;
+    box-shadow:
+        8px 8px 15px #4d8ee8,
+        -8px -8px 15px #1c4989;
+}
+
+.orange-page .button {
+    background-color: #d97f19;
+    box-shadow:
+        8px 8px 15px #f3ad57,
+        -8px -8px 15px #c9781d;
+}
+
+.red-page .button {
+    background-color: #d92c42;
+    box-shadow:
+        8px 8px 15px #ff6a7c,
+        -8px -8px 15px #c72539;
+}
+
+.orange-page .button:hover {
+    box-shadow:
+        4px 4px 10px #f3ad57,
+        -4px -4px 10px #c9781d;
+}
+
+.red-page .button:hover {
+    box-shadow:
+        4px 4px 10px #ff6a7c,
+        -4px -4px 10px #c72539;
+}
+
+/* center eyes */
+.eyes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3); 
+    display: flex;
+    gap: 60px;
+}
+
+.eye {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.eye.blinking {
+    animation: blink 6s ease-in-out infinite;
+}
+
+/* eyelid */
+.eye::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 60px;
+    z-index: 2;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.ball {
+    transition: left 0.18s ease, transform 0.18s ease,
+}
+
+.eye.click-close {
+    animation: eyeClickClose 0.45s ease;
+}
+
+@keyframes eyeClickClose {
+    0% {
+        height: 120px;
+    }
+    50% {
+        height: 180px;
+    }
+    100% {
+        height: 120px;
+    }
+}
+
+.blue-page .eye::before {
+    background: #4d8ee8;
+}
+
+.orange-page .eye::before {
+    background: #f39223;
+}
+
+.red-page .eye::before {
+    background: #ff5468;
+}
+
+/* sleepy blink */
+@keyframes blink {
+    0% {
+        height: 120px;
+    }
+
+    40% {
+        height: 120px;
+    }
+
+    48% {
+        height: 35px; 
+    }
+
+    55% {
+        height: 120px;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
+
+.eye.click-close {
+    animation: eyeClickClose 0.45s ease;
+}
+
+@keyframes eyeClickClose {
+    0% {
+        height: 120px;
+    }
+    50% {
+        height: 180px;
+    }
+    100% {
+        height: 120px;
+    }
+}
+
+.blue-page .eye::before {
+    background: #4d8ee8;
+}
+
+.orange-page .eye::before {
+    background: #f39223;
+}
+
+.red-page .eye::before {
+    background: #ff5468;
+}
+
+/* sleepy blink */
+@keyframes blink {
+    0% {
+        height: 120px;
+    }
+
+    40% {
+        height: 120px;
+    }
+
+    48% {
+        height: 35px; 
+    }
+
+    55% {
+        height: 120px;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
